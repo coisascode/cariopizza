@@ -22,6 +22,12 @@
             font-size: 3em;
             margin: 5%;
         }
+        #primeiraOferta{
+          top: 10%;
+        }
+        #ultimaOferta{
+          bottom: 12%;
+        }
         #concluir{
           position: fixed;
           bottom: 5px;
@@ -39,7 +45,7 @@
   <body>
     <div class="interface">
       <div class="Cardapio">
-        <div class="pizza">
+        <div id="primeiraOferta" class="pizza">
         <h4>Calabresa</h4>
         </div>
         <div class="pizza">
@@ -60,7 +66,7 @@
         <div class="pizza">
         <h4>Calabresa</h4>
         </div>
-        <div class="pizza">
+        <div id="ultimaOferta" class="pizza">
         <h4>Calabresa</h4>
         </div>        
         <footer id="concluir">Fechar pedido</footer>
