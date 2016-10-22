@@ -4,85 +4,134 @@
     <meta name="viewport" content="width=device-width">
     <meta charset="utf-8"/>
     <style rel="stylesheet">
-        body{
-         background: #ff9b59;
-         font-family: arial;
-        }
-        .interface{
-          width: 100%;
-          min-height: 400px;
-        }
-        .pizza{
-          width: 90%;
-          min-height: 100px;
-          background: #ed2121;
-          margin: 5% auto;
-          padding: 2%;
-        }
-        .pizza h4{
-          font-size: 1em;
-          margin: 0px;
-        }
-       .pizza img{
-          width: 50%;
-          height: auto;
-          position: left;
-       }
-        #primeiraOferta{
-          margin-top: 20%;
-        }
-        #ultimaOferta{
-          margin-bottom: 25%;
-        }
-        #concluir{
-          position: fixed;
-          bottom: 5px;
-          width: 90%;
-          height: 10%; 
-          left: 10;
-          right: 10;
-          padding: 2%;
-          background: #56a53b;
-          border-radius: 20px;
-          font-size: 2em;
-        }
+        @charset "utf-8";
+
+          body{
+            background: #ffe7d6;
+            font-family: Arial, sans-serif;
+          }
+          .interface{
+            width: 100%;
+            min-height: 400px;
+          }
+          .pizza{
+            width: 90%;
+              position: relative;
+              display: table;
+            min-height: 100px;
+            background: #e51937;
+            margin: 5% auto;
+            padding: 2%;
+          }
+          .pizza h4{
+            font-size: 1em;
+              color: #ffffff;
+            margin-bottom: 3%;
+          }
+          .valor{
+              float: right;
+              font-weight: 800;
+          }
+          .pizza img{
+            width: 45%;
+            height: auto;
+              display: inline;
+              float: left;
+          }
+          .ingredientes{
+              width: 45%;
+              height: 20%;
+              float: left;
+              margin-left: 2%;
+          }
+          .btnPedir, .btnQuantidade{
+              width: 30%;
+              background: #ffffff;
+            float: left;
+            margin-left: 70%;
+          }
+          .primeiraOferta{
+            margin-top: 20%;
+          }
+          #ultimaOferta{
+            margin-bottom: 25%;
+          }
+          #btnEntregar{
+            position: fixed;
+            bottom: 1%;
+            width: 45%;
+            height: 10%;
+            right: 3%;
+            padding: 2%;
+            background: #56a53b;
+            border-radius: 0px 20px 20px 0px;
+          }
+          #btnEntregar span{
+              font-size: 2em;
+              color: #eeeeee;
+              display: block;
+          }
+          #subTotal{
+              position: fixed;
+              bottom: 1%;
+              width: 45%;
+              height: 10%;
+              left: 3%;
+              padding: 2%;
+              background: #e6e6e6;
+              border-radius: 20px 0px 0px 20px;
+              font-size: 1em;
+
+          }
+          #subTotal h5{
+              margin-top: 1px;
+          }
     </style>
   </head>
   <body>
-    <div class="interface">
-      <div class="Cardapio">
-        <div id="primeiraOferta" class="pizza"> 
-        <h4>Calabresa</h4>
+<div class="interface">
+  <!--- Estilização do cardápio --->
+  <div class="Cardapio">
+
+    <div class="pizza primeiraOferta">
+      <h4>Calabresa <span class="valor"> R$: 35,90</span></h4>
         <img src="https://d3o331zyotmfip.cloudfront.net/img/products/14109753665419c6861f5292.81600968.png" alt="calabresa">
-        </div>
-        <div class="pizza">
-        <h4>Calabresa</h4>
-        </div>
-        <div class="pizza">
-        <h4>Calabresa</h4>
-        </div>
-        <div class="pizza">
-        <h4>Calabresa</h4>
-        </div>
-        <div class="pizza">
-        <h4>Calabresa</h4>
-        </div>
-        <div class="pizza">
-        <h4>Calabresa</h4>
-        </div>
-        <div class="pizza">
-        <h4>Calabresa</h4>
-        </div>
-        <div id="ultimaOferta" class="pizza">
-        <h4>Calabresa</h4>
-        </div>        
-        <footer id="concluir">Fechar pedido</footer>
+      <div class="ingredientes">
+          Ingredientes:
       </div>
-
-
-      <div class="sessao"></div>
-      <div class="sessao"></div>
-      <div class="sessao"></div>
+      <div class="btnPedir">botao</div>
     </div>
-  </body>
+
+    <div class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <div class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <div class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <div class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <div class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <div class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <div id="ultimaOferta" class="pizza">
+      <h4>Calabresa</h4>
+    </div>
+    <footer>
+        <div id="subTotal"><h5>SubTotal</h5></div>
+        <div id="btnEntregar"><span>Entregar</span></div>
+    </footer>
+  </div>
+
+  <div class="sessao"></div>
+  <div class="sessao"></div>
+  <div class="sessao"></div>
+</div>
+</body>
 </html>
